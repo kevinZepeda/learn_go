@@ -2,6 +2,7 @@ package main
 
 import(
     "fmt"
+    "strconv"
 )
 // Global vars
 var jp int = 21
@@ -13,7 +14,7 @@ func main() {
   // var [Name of variable] [Type of variable]
   // print value (%v) and type (%T) of this variable
   // This is another format to declaration name := [value]
-  // the vars have to be used 
+  // the vars have to be used
   var number_name int
   number_name = 42
   fmt.Printf("%v",number_name)
@@ -52,5 +53,18 @@ func main() {
   fmt.Println(jp)
   var jp int = 32
   fmt.Println(jp)
+  fmt.Println(" ")
+
+  var entero int = 45
+  fmt.Printf("%v,%T \n",entero,entero)
+
+  var flotante float32
+  flotante = float32(entero)
+  fmt.Printf("%v,%T\n",flotante,flotante)
+
+  var cadena string
+  // cadena = string(entero)// get ascii caracter by integer
+  cadena = strconv.Itoa(entero)
+  fmt.Printf("%v,%T",cadena,cadena)
 
 }
